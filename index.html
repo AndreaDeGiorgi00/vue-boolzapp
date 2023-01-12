@@ -14,11 +14,64 @@
     <script src="script.js" defer></script>
     <!--Vue-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="background">
-       
+        <div class="container d-flex">
+            <div class="profile-and-contact bg-brown">
+
+
+                <div class="personal-profile bg-red d-flex justify-content-between align-items-center">
+                    <div class="info-personal-profile d-flex">
+                        
+                        <div class="header-profile-img bg-green w-20 h-100"></div>
+                        <div class="personal-profile-name bg-brown w-80 h-100"> </div>
+                    </div>
+
+                    <div class="profile-icons">
+                        <div class="icona bg-blue"></div>
+                        <div class="icona bg-blue"></div>
+                        <div class="icona bg-blue"></div>
+                    </div>
+                </div>
+
+                <div class="notifiche-section bg-blue">
+                    <div class="card mb-3 bg-blue" >
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                
+                                <i class="fa-regular fa-bell-slash bg-white"></i>
+                            </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <p class="card-text">ricevi notifiche di nuovi messaggi</p>
+                              <p class="card-text"><small class="text-muted">attiva notifiche desktop</small></p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ricerca-contatto-section d-flex">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" >
+                </div>
+
+                <!-- !contact section-->
+                <div class="contenitore-section">
+                    <div class="d-flex profile-card-conteiner bg-green">
+                        <div class="profile-img bg-yellow"></div>
+                        <div class=" text-area ml-2">
+                            <p class="nome-contatto">Andrea</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="chat bg-yellow"></div>
+        </div>
     </div>
 </body>
 </html>

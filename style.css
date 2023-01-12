@@ -1,6 +1,120 @@
 .background {
-    background-image: linear-gradient(rgb(77, 77, 238) 15%,rgb(86, 78, 78) 10%);
+    background-image: linear-gradient(#009688 25%,#DBDBD4 10%);
     height: 100vh;
     width: 100vw;
 }
 
+
+/*bg-colors*/
+
+.bg-red{
+    background-color: red;
+}
+.bg-blue{
+    background-color: #8EDAFC;
+}
+.bg-green{
+    background-color: green;
+}
+.bg-yellow{
+    background-color: yellow;
+}
+.bg-brown{
+    background-color: brown;
+}
+.bg-white{
+    background-color: brown;
+}
+/*sections*/
+.container{
+    height: 700px;
+    width: 75%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.profile-and-contact{
+    height: 100%;
+    width: 45%;
+}
+
+.chat{
+    height: 100%;
+    width: 80%;
+}
+
+
+/*profile and contact section*/
+
+.personal-profile{
+    width: 100%;
+    height: 20%;
+}
+
+.header-profile-img{
+    width: 30%;
+    height: 100%;
+}
+
+.info-personal-profile{
+    width: 80%;
+    height: 100%;
+}
+.profile-name{
+    width: 80%;
+}
+.notifiche-section i{
+    height: 70px;
+    width: 70px;
+    border-radius:50% ;
+    font-size: 40px;
+    padding: 10px;
+
+}
+
+/*notifiche section*/
+.card-body p{
+    margin: 0;
+    padding: 0;
+}
+
+.notifiche-section input{
+    width: 100%;
+}
+small{
+    text-decoration: underline;
+}
+/*ricerca contatto*/
+
+.ricerca-contatto-section{
+    padding:10px;
+}
+
+.ricerca-contatto-section i{
+    font-size: 30px;
+
+}
+
+.ricerca-contatto-section input{
+    width: 100%;
+}
+
+/*contact section*/
+.profile-card-conteiner{
+    height: 80px;
+    width: 100%;
+}
+
+.profile-img{
+    width: 20%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.text-area{
+    margin-left: 30px;
+}
+.contenitore-section{
+    overflow: auto;
+    max-height: 308px;
+}
