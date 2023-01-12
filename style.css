@@ -1,7 +1,7 @@
 .background {
     background-image: linear-gradient(#009688 25%,#DBDBD4 10%);
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -23,7 +23,7 @@
     background-color: brown;
 }
 .bg-white{
-    background-color: brown;
+    background-color: white;
 }
 
 .bg-light-grey{
@@ -156,9 +156,10 @@ small{
     border-radius: 50%;
     overflow: hidden;
 }
-.contenitore-section
+
 .description{
     padding-left: 20px;
+    height: 60px;
 }
 
 
@@ -170,6 +171,9 @@ small{
 .contact-element{
     width: 100%;
     padding: 20px;
+}
+.contact-element i{
+    font-size: 25px;
 }
 
 
