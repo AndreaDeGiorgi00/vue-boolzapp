@@ -7,10 +7,20 @@ const app = Vue.createApp({
             allInfos : data ,
             
         }},
-})
+        methods:{
+            getPicture(i){
+                let finalText = "";
+                finalText +=  `img/avatar${i.avatar}.jpg`
+                return finalText
+            },
+            getName(i){
+                return i.name
+            }  
+        }
+    })
 
 
-app.mount(".target")
+app.mount(".background")
 console.log(data)
 
 

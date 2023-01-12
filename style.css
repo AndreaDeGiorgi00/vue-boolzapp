@@ -25,6 +25,10 @@
 .bg-white{
     background-color: brown;
 }
+
+.bg-light-grey{
+    background-color: #E9EBEB;
+}
 /*sections*/
 .container{
     height: 700px;
@@ -56,7 +60,7 @@
     align-items: center;
 }
 .profile-and-contact .header{
-    padding: 0 10px;
+    padding:10px;
 }
 
 .header-profile-img{
@@ -65,11 +69,10 @@
 }
 
 .info-personal-profile{
-    width: 80%;
     height: 100%;
 }
 .personal-profile-name{
-    width: 80%;
+    margin-left: 10px;
 }
 .notifiche-section i{
     height: 70px;
@@ -78,6 +81,12 @@
     font-size: 40px;
     padding: 10px;
 
+}
+
+.profile-icons{
+    width: 90px;
+    justify-content: space-between;
+    font-size: 25px;
 }
 
 /*notifiche section*/
@@ -107,17 +116,20 @@ small{
     width: 100%;
 }
 
-/*contact section*/
+/* ! contact section*/
 .profile-card-conteiner{
     height: 80px;
     width: 100%;
-    padding: 0 10px;
+    padding:  10px;
+    
 }
 
 .contenitore-section .profile-img{
-    width: 20%;
+    width: 60px;
     height: 100%;
     border-radius: 50%;
+    overflow: hidden;
+    
 }
 
 .text-area{
@@ -125,19 +137,26 @@ small{
 }
 .contenitore-section{
     overflow: auto;
-    max-height: 308px;
+    height: 356px;
+    overflow-y: scroll;
 }
 
 
+.profile-img img{
+    max-height: 100%;
+    object-fit: cover;
+    
+}
 /*========================*/
 /* chat section*/
 
 .header .profile-img{
-    width: 72px;
-    height: 72px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    overflow: hidden;
 }
-
+.contenitore-section
 .description{
     padding-left: 20px;
 }

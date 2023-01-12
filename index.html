@@ -26,14 +26,16 @@
                 <div class="header bg-red d-flex justify-content-between align-items-center">
                     <div class="info-personal-profile d-flex">
                         
-                        <div class="profile-img bg-green "></div>
-                        <div class="personal-profile-name bg-brown"> </div>
+                        <div class="profile-img bg-green ">
+                            <img :src="getPicture(allInfos.user)" alt="profilepicture">
+                        </div>
+                        <div class="personal-profile-name d-flex align-items-center"> {{getName(allInfos.user)}}</div>
                     </div>
 
-                    <div class="profile-icons">
-                        <div class="icona bg-blue"></div>
-                        <div class="icona bg-blue"></div>
-                        <div class="icona bg-blue"></div>
+                    <div class="profile-icons d-flex">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <i class="fa-solid fa-comment"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
 
@@ -61,10 +63,12 @@
 
                 <!-- !contact section-->
                 <div class="contenitore-section">
-                    <div class="d-flex profile-card-conteiner bg-green">
-                        <div class="profile-img bg-yellow"></div>
+                    <div class="d-flex profile-card-conteiner bg-light-grey" v-for="element in allInfos.contacts">
+                        <div class="profile-img ">
+                            <img :src="getPicture(element)" alt="avatar">
+                        </div>
                         <div class=" text-area ml-2">
-                            <p class="nome-contatto">Andrea</p>
+                            <p class="nome-contatto">{{element.name}}</p>
                         </div>
                     </div>
                 </div>
