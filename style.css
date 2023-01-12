@@ -36,6 +36,7 @@
 .profile-and-contact{
     height: 100%;
     width: 45%;
+    border-right: 3px solid rgb(103, 103, 255);
 }
 
 .chat{
@@ -46,9 +47,16 @@
 
 /*profile and contact section*/
 
-.personal-profile{
+
+.header{
     width: 100%;
-    height: 20%;
+    height: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-and-contact .header{
+    padding: 0 10px;
 }
 
 .header-profile-img{
@@ -60,7 +68,7 @@
     width: 80%;
     height: 100%;
 }
-.profile-name{
+.personal-profile-name{
     width: 80%;
 }
 .notifiche-section i{
@@ -103,9 +111,10 @@ small{
 .profile-card-conteiner{
     height: 80px;
     width: 100%;
+    padding: 0 10px;
 }
 
-.profile-img{
+.contenitore-section .profile-img{
     width: 20%;
     height: 100%;
     border-radius: 50%;
@@ -117,4 +126,73 @@ small{
 .contenitore-section{
     overflow: auto;
     max-height: 308px;
+}
+
+
+/*========================*/
+/* chat section*/
+
+.header .profile-img{
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+}
+
+.description{
+    padding-left: 20px;
+}
+
+
+.icons{
+    height: 20px;
+    width: 20px;
+}
+
+.contact-element{
+    width: 100%;
+    padding: 20px;
+}
+
+
+/*messaggi*/
+
+div [class*="message"]{
+    padding: 5px 10px;
+    border-radius: 15px;
+    width: 300px;
+}
+
+div [class*="message"] :last-child{
+    align-self: flex-end;
+}
+.user-message{
+    background-color: white;
+}
+
+.contact-message{
+    background-color: #D5F9BA;
+}
+
+.chat-section{
+    background-image: url("img/mine.jpg");
+    height: 80%;
+    overflow: auto;
+}
+
+
+/*writing section*/
+
+.writing-section{
+    width: 100%;
+    height: 8%;
+}
+
+.writing-section input{
+    width: 90%;
+    height: 100%;
+}
+
+.writing-section i{
+    font-size: 20px;
+    color: grey;
 }
