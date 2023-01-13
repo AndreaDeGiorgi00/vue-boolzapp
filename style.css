@@ -120,8 +120,11 @@ small{
 .profile-card-conteiner{
     height: 80px;
     width: 100%;
-    padding:  10px;
-    
+    padding:  10px; 
+}
+
+.profile-card-conteiner:hover{
+    background-color: #E9EBEB;
 }
 
 .contenitore-section .profile-img{
