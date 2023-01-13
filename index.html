@@ -71,7 +71,7 @@
                 <!-- !contact section-->
 
                 <div class="contenitore-section">
-                    <div class="d-flex profile-card-conteiner" v-for="element in allInfos.contacts">
+                    <div class="d-flex profile-card-conteiner" v-for="(element , i) in allInfos.contacts" @click="currentIndex = i">
                         <div class="profile-img ">
                             <img :src="getPicture(element)" alt="avatar">
                         </div>
