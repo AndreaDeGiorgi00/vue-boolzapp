@@ -13,6 +13,8 @@
     <script src="bigDataSmall.js" defer></script>
     <script src="bigData.js"></script>
     <script src="script.js" defer></script>
+    <!--luxon-->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
     <!--Vue-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!--font-awesome-->
@@ -128,7 +130,7 @@
                 
                 <div class="writing-section d-flex justify-content-between align-items-center p-2">
                     <div><i class="fa-regular fa-face-smile"></i></div>
-                    <input type="text">
+                    <input type="text" @keyup.enter="addMessage(newMessage)" v-model="newMessage" >
                     <div><i class="fa-solid fa-microphone"></i></div>
 
                 </div>

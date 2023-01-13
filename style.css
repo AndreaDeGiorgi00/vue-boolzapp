@@ -193,6 +193,8 @@ div [class*="Message"]{
 
 div [class*="Message"] :last-child{
     align-self: flex-end;
+    font-size: 10px;
+    color: grey;
 }
 .userMessage{
     background-color: white;

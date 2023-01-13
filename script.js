@@ -1,5 +1,6 @@
 console.log("vue Ok " , Vue)
 
+let dt = luxon.DateTime;
 
 const app = Vue.createApp({
     data(){
@@ -87,7 +88,15 @@ const app = Vue.createApp({
                 },
               ],
               currentIndex: 0,
+              newMessage : "",
         }},
+
+        computed:{
+            getCurrentTime(){
+                return dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
+            },
+           
+        },
 
         methods:{
             getPicture(i){
@@ -100,12 +109,25 @@ const app = Vue.createApp({
             },
             messageOrigin(messaggi){
                 return messaggi.status =="sent" ? "contactMessage" : "userMessage"
-            }  
-        }
+            },
+            addMessage(testoMessaggio){
+                let newDate = this.getCurrentTime;
+                let newElement={
+                    date : newDate,
+                    text: testoMessaggio,
+                    status: "sent"
+
+                }
+                this.contacts[this.currentIndex].messages.push(newElement)
+                this.newMessage = "";
+            }
+        },
+        
     })
 
 
 app.mount(".background")
 console.log(data)
+
 
 
