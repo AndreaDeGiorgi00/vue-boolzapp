@@ -92,7 +92,7 @@
                     <div class="contact-element d-flex justify-content-between">
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="profile-img ">
-                                <img src="img/avatar_1.jpg" alt="">
+                                <img :src="getPicture(contacts[currentIndex])" alt="getName(contacts[currrentIndex])">
                             </div>
                             <div class="description">
                                 <h5>Andrea</h5> 
@@ -114,7 +114,7 @@
 
                 <div class="chat-section h-80">
                     <div class="d-flex flex-column h-80 w-100 p-2">
-                        
+
                         <div  v-for="element in contacts[currentIndex].messages" :class="messageOrigin(element) ">
                             <span>{{element.text}}</span>
                             <span >{{element.date}}</span>
