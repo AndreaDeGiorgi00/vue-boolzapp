@@ -120,6 +120,20 @@ const app = Vue.createApp({
                 }
                 this.contacts[this.currentIndex].messages.push(newElement)
                 this.newMessage = "";
+                setTimeout(this.reciveMessage, 1000);
+                
+
+
+            },
+            reciveMessage(){
+                let newDate = this.getCurrentTime;
+                let newElement={
+                    date : newDate,
+                    text: "ok",
+                    status: "recived"
+
+                }
+                this.contacts[this.currentIndex].messages.push(newElement)
             }
         },
         
