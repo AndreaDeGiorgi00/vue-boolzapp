@@ -89,16 +89,21 @@ const app = Vue.createApp({
               ],
               currentIndex: 0,
               newMessage : "",
+              findContact : "",
         }},
 
         computed:{
+            getLastAcces(){
+                return dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE)
+            },
+            
+            
+        },
+        
+        methods:{
             getCurrentTime(){
                 return dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
             },
-           
-        },
-
-        methods:{
             getPicture(i){
                 let finalText = "";
                 finalText +=  `img/avatar${i.avatar}.jpg`
@@ -113,7 +118,7 @@ const app = Vue.createApp({
             addMessage(testoMessaggio){
                 let newDate = this.getCurrentTime;
                 let newElement={
-                    date : newDate,
+                    date : newDate(),
                     text: testoMessaggio,
                     status: "sent"
 
@@ -128,7 +133,7 @@ const app = Vue.createApp({
             reciveMessage(){
                 let newDate = this.getCurrentTime;
                 let newElement={
-                    date : newDate,
+                    date : newDate(),
                     text: "ok",
                     status: "recived"
 

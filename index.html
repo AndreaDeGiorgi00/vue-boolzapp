@@ -67,13 +67,13 @@
 
                 <div class="ricerca-contatto-section d-flex">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" >
+                    <input type="text" v-model="findContact" >
                 </div>
 
                 <!-- !contact section-->
 
                 <div class="contenitore-section">
-                    <div class="d-flex profile-card-conteiner" v-for="(element , i) in allInfos.contacts" @click="currentIndex = i">
+                    <div class="d-flex profile-card-conteiner" v-for="(element , i) in contacts" @click="currentIndex = i">
                         <div class="profile-img ">
                             <img :src="getPicture(element)" alt="avatar">
                         </div>
@@ -98,7 +98,7 @@
                             </div>
                             <div class="description">
                                 <h5>Andrea</h5> 
-                                <p>ultimo accesso alle</p>
+                                <p>ultimo accesso alle {{getLastAcces}}</p>
     
                             </div>
 
