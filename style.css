@@ -182,21 +182,27 @@ small{
 
 /*messaggi*/
 
-div [class*="message"]{
+div [class*="Message"]{
     padding: 5px 10px;
     border-radius: 15px;
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
 }
 
-div [class*="message"] :last-child{
+div [class*="Message"] :last-child{
     align-self: flex-end;
 }
-.user-message{
+.userMessage{
     background-color: white;
 }
 
-.contact-message{
+.contactMessage{
+    align-self: flex-end;
     background-color: #D5F9BA;
+    
+    
 }
 
 .chat-section{

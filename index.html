@@ -10,7 +10,8 @@
     <!--style-->
     <link rel="stylesheet" href="style.css">
     <!--scripts-->
-    <script src="bigData.js" defer></script>
+    <script src="bigDataSmall.js" defer></script>
+    <script src="bigData.js"></script>
     <script src="script.js" defer></script>
     <!--Vue-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -113,13 +114,10 @@
 
                 <div class="chat-section h-80">
                     <div class="d-flex flex-column h-80 w-100 p-2">
-                        <div class="user-message d-flex flex-column g-6">
-                            <span>testo messaggio</span>
-                            <span >orario</span>
-                        </div>
-                        <div class="contact-message d-flex flex-column align-self-end">
-                            <span>testo messaggio</span>
-                            <span >orario</span>
+                        
+                        <div  v-for="element in contacts[currentIndex].messages" :class="messageOrigin(element) ">
+                            <span>{{element.text}}</span>
+                            <span >{{element.date}}</span>
                         </div>
                         
                     </div>
