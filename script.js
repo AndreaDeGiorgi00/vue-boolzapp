@@ -1,4 +1,4 @@
-console.log("vue Ok " , Vue)
+
 
 let dt = luxon.DateTime;
 
@@ -96,7 +96,9 @@ const app = Vue.createApp({
             getLastAcces(){
                 return dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE)
             },
-            
+            contactsFiltered(){
+                return this.contacts.filter( element => element.name.indexOf(this.findContact) > -1)
+            }
             
         },
         
@@ -114,6 +116,16 @@ const app = Vue.createApp({
             },
             messageOrigin(messaggi){
                 return messaggi.status =="sent" ? "contactMessage" : "userMessage"
+            },
+            getRealIndex(singlename){
+                for (x = 0 ; x < this.contacts.length ; x++ ){
+                    
+                    if (this.getName(this.contacts[x]) == singlename ){
+                        console.log(x)
+                        return x 
+                    }
+
+                }
             },
             addMessage(testoMessaggio){
                 let newDate = this.getCurrentTime;
@@ -146,7 +158,7 @@ const app = Vue.createApp({
 
 
 app.mount(".background")
-console.log(data)
+
 
 
 

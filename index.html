@@ -73,7 +73,7 @@
                 <!-- !contact section-->
 
                 <div class="contenitore-section">
-                    <div class="d-flex profile-card-conteiner" v-for="(element , i) in contacts" @click="currentIndex = i">
+                    <div class="d-flex profile-card-conteiner" v-for="(element , i) in contactsFiltered" @click=" currentIndex = getRealIndex(element.name)" >
                         <div class="profile-img ">
                             <img :src="getPicture(element)" alt="avatar">
                         </div>
@@ -94,10 +94,10 @@
                     <div class="contact-element d-flex justify-content-between">
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="profile-img ">
-                                <img :src="getPicture(contacts[currentIndex])" alt="getName(contacts[currrentIndex])">
+                                <img :src="getPicture(contacts[currentIndex])" :alt="getName(contacts[currentIndex])">
                             </div>
                             <div class="description">
-                                <h5>Andrea</h5> 
+                                <h5>{{getName(contacts[currentIndex])}}</h5> 
                                 <p>ultimo accesso alle {{getLastAcces}}</p>
     
                             </div>
