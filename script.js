@@ -97,7 +97,7 @@ const app = Vue.createApp({
                 return dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE)
             },
             contactsFiltered(){
-                return this.contacts.filter( element => element.name.indexOf(this.findContact) > -1)
+                return this.contacts.filter( element => element.name.toLocaleLowerCase().indexOf(this.findContact.toLocaleLowerCase()) > -1)
             }
             
         },
@@ -118,6 +118,7 @@ const app = Vue.createApp({
                 return messaggi.status =="sent" ? "contactMessage" : "userMessage"
             },
             getRealIndex(singlename){
+
                 for (x = 0 ; x < this.contacts.length ; x++ ){
                     
                     if (this.getName(this.contacts[x]) == singlename ){
