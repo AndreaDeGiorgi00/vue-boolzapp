@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    
     <div class="background">
         <div class="container d-flex">
             <div class="profile-and-contact bg-white">
@@ -77,8 +78,10 @@
                         <div class="profile-img ">
                             <img :src="getPicture(element)" alt="avatar">
                         </div>
-                        <div class=" text-area ml-2">
-                            <p class="nome-contatto">{{element.name}}</p>
+                        <div class=" text-area ml-2 d-flex flex-column">
+                            <span class="nome-contatto">{{element.name}}</span>
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -117,9 +120,14 @@
                 <div class="chat-section h-80">
                     <div class="d-flex flex-column h-80 w-100 p-2">
 
-                        <div  v-for="element in contacts[currentIndex].messages" :class="messageOrigin(element) ">
-                            <span>{{element.text}}</span>
-                            <span >{{element.date}}</span>
+                        <div  v-for="element in contacts[currentIndex].messages" :class="messageOrigin(element) " class="boxMessagio" >
+                            <div class="textMessage d-flex flex-column" >
+                                
+                                <span>{{element.text}}</span>
+                                <span class="oraEData">{{element.date}}</span>
+                                
+                            </div> 
+                            
                         </div>
                         
                     </div>

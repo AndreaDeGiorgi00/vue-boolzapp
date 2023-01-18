@@ -152,6 +152,12 @@ const app = Vue.createApp({
 
                 }
                 this.contacts[this.currentIndex].messages.push(newElement)
+            },
+            getLastMessage(element){
+                return element.messages[element.messages.length - 1].text 
+            },
+            getLastMessageAcces(element){
+                return element.messages[element.messages.length - 1].date 
             }
         },
         
@@ -159,7 +165,6 @@ const app = Vue.createApp({
 
 
 app.mount(".background")
-
 
 
 
